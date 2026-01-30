@@ -183,7 +183,7 @@ def main():
 
     top_sellers = [s for s, _ in seller_counter.most_common(50)]
 
-    filename = "morocco_market_data.xlsx"
+    filename = "../data/morocco_market_data.xlsx"
     wb, ws = get_workbook(filename)
 
     total_rows = 0

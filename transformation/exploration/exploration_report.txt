@@ -1,0 +1,195 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    RAPPORT D'EXPLORATION DES DONNÉES                         ║
+║                           eBay Maroc Dataset                                 ║
+║                      Généré le: 2026-01-19 16:29:15                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+==============================================================================
+📂  CHARGEMENT DES DONNÉES
+==============================================================================
+Fichier: ../data/morocco_market_enriched.csv
+
+✅ Lignes: 23,860,929
+✅ Colonnes: 9
+
+==============================================================================
+🔧  SCHEMA DÉTECTÉ PAR SPARK (types inférés)
+==============================================================================
+Voici comment Spark a interprété vos données:
+
+   run_date             → DateType()
+   collected_at         → TimestampType()
+   listing_date         → TimestampType()
+   seller               → StringType()
+   title                → StringType()
+   category             → StringType()
+   price                → StringType()
+   currency             → StringType()
+   market               → StringType()
+
+==============================================================================
+👀  APERÇU DES DONNÉES BRUTES (5 lignes)
+==============================================================================
+  run_date               collected_at        listing_date   seller                                                                           title                  category price currency  market
+2025-12-16 2025-12-16 20:42:51.473483 2023-05-23 02:21:16 baq_8122     Vintage Phone Sanyo Telephone Cordless TH 5100 B Electric Japan Made Model                   1970-Now  79.0      USD MOROCCO
+2025-12-16 2025-12-16 20:42:51.473483 2025-11-27 21:51:23 baq_8122 Original Nokia 8850 Handy Neu Händler Garantie geprüft volle Funktion MEGA Gold Cell Phones & Smartphones  48.0      USD MOROCCO
+2025-12-16 2025-12-16 20:42:51.473483 2023-05-23 02:19:21 baq_8122                  Vintage Phone Freedom 2500 Telephone 1982 Southwestern Telecom                  1970-Now  85.0      USD MOROCCO
+2025-12-16 2025-12-16 20:42:51.473483 2025-09-12 22:12:32 baq_8122       Vintage Nokia 3310 – Classic Unlocked GSM Mobile Phone  Retro Collectible       Vintage Cell Phones  92.0      USD MOROCCO
+2025-12-16 2025-12-16 20:42:51.473483 2025-09-12 21:55:39 baq_8122       Rare Vintage Nokia 1110 - Unlocked GSM Mobile - Collectible Classic Phone       Vintage Cell Phones  90.0      USD MOROCCO
+
+==============================================================================
+❓  VALEURS NULLES PAR COLONNE
+==============================================================================
+Colonne                     Nulls        %
+---------------------------------------------
+run_date                        0    0.00%
+collected_at                    0    0.00%
+listing_date                    0    0.00%
+seller                          0    0.00%
+title                           0    0.00%
+category                        0    0.00%
+price                           0    0.00%
+currency                        0    0.00%
+market                          0    0.00%
+
+==============================================================================
+�  VALEURS UNIQUES PAR COLONNE
+==============================================================================
+Colonne                      Uniques
+----------------------------------------
+run_date                           2
+collected_at                 686,707
+listing_date              19,847,254
+seller                           262
+title                          2,012
+category                         259
+price                          4,315
+currency                           8
+market                             3
+
+==============================================================================
+📦  DISTRIBUTION DES CATÉGORIES
+==============================================================================
+                      category   count
+ Clothing, Shoes & Accessories 1325982
+                          Baby 1325726
+        Video Games & Consoles 1325037
+               Health & Beauty 1324612
+    Musical Instruments & Gear 1324534
+                  Pet Supplies 1324408
+                Sporting Goods 1323994
+             Jewelry & Watches 1323635
+               Cameras & Photo 1323626
+                    Automotive 1323565
+         Business & Industrial 1323275
+        TV, Video & Home Audio 1323222
+                 Home & Garden 1322936
+         Books, Movies & Music 1322884
+                   Electronics 1322611
+Computers/Tablets & Networking 1322428
+                Toys & Hobbies 1322210
+     Cell Phones & Accessories 1321872
+               Digital Cameras    2326
+                  Wristwatches    1495
+
+==============================================================================
+👤  TOP 15 VENDEURS
+==============================================================================
+       seller  count
+seller_ma_099 113321
+seller_ma_142 113303
+seller_ma_146 113195
+seller_ma_154 113081
+seller_ma_023 113049
+seller_ma_191 113028
+seller_ma_180 113010
+seller_ma_035 112986
+seller_ma_111 112943
+seller_ma_166 112939
+seller_ma_061 112938
+seller_ma_161 112909
+seller_ma_016 112888
+seller_ma_122 112862
+seller_ma_119 112848
+
+==============================================================================
+🔍  EXEMPLES DE VALEURS (pour vérifier le format)
+==============================================================================
+   run_date: [datetime.date(2025, 12, 16), datetime.date(2025, 12, 23)]
+   collected_at: [Timestamp('2025-12-23 20:33:30.111886'), Timestamp('2025-12-23 20:33:30.467031'), Timestamp('2025-12-23 20:33:30.568930')]
+   listing_date: [Timestamp('2025-12-14 21:53:13'), Timestamp('2025-08-22 13:47:48'), Timestamp('2025-09-20 07:31:50.709925')]
+   seller: ['seller_ma_121', 'seller_ma_110', 'drik-oui']
+   title: ['ZWILLING Sorrento Plus 8-pc Double-Wall Glass Coffee Mug Set', 'Sony PowerShot A2300 HD 16MP Digital Camera - Black w/ Original Battery & Charge', 'Universal AC Adapter 12V 2A Power Supply Charger 24W AC110V to DC12V 2000Ma 1500']
+   category: ['Mouse Pads & Wrist Rests', 'Hookup & Lead Wire', 'Car Lighting']
+   price: ['102.0', '13.87', '23.97']
+   currency: ['60.78', '75.99', '97.25']
+   market: ['77.1', 'MOROCCO', 'USD']
+
+==============================================================================
+💰  STATISTIQUES PRIX (describe)
+==============================================================================
+Statistiques brutes retournées par Spark:
+
+summary                   price
+  count                23860929
+   mean      182.19415803409964
+ stddev       267.7268074227875
+    min       Line Replacement"
+    max Wire & Cable Connectors
+
+==============================================================================
+🎯  ANALYSE DE LA QUALITÉ DES DONNÉES
+==============================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              POINTS POSITIFS                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+✅ COMPLÉTUDE : 0% de valeurs nulles - Excellent !
+✅ VOLUME     : ~24 millions de lignes - Dataset conséquent pour l'analyse
+✅ DATES      : Formats bien détectés (DateType, TimestampType)
+✅ VENDEURS   : Distribution équilibrée (~113K produits/vendeur)
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           PROBLÈMES DÉTECTÉS                                │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+⚠️ PROBLÈME 1 : Type de la colonne PRICE
+   - Détecté comme StringType au lieu de DoubleType
+   - Impact : min="Line Replacement", max="Wire & Cable..." (texte au lieu de nombres)
+   - Cause probable : Certaines lignes ont du texte dans la colonne price
+
+⚠️ PROBLÈME 2 : Colonnes CURRENCY et MARKET mélangées
+   - currency contient : ['60.78', '75.99', '97.25'] → Ce sont des prix !
+   - market contient   : ['77.1', 'MOROCCO', 'USD'] → Mélange de valeurs
+   - Cause : Décalage de colonnes dans certaines lignes du fichier source
+
+⚠️ PROBLÈME 3 : Faible diversité des titres
+   - Seulement 2,012 titres uniques pour 24M lignes
+   - Cela suggère beaucoup de doublons (normal pour données synthétiques)
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          DIAGNOSTIC DU DÉCALAGE                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+Le problème vient probablement de titres contenant des virgules (,) qui ne sont 
+pas correctement échappées dans le CSV. Exemple :
+
+   Ligne correcte   : date,seller,"Titre normal",Electronics,99.0,USD,MOROCCO
+   Ligne décalée    : date,seller,Titre avec, virgule,Electronics,99.0,USD,MOROCCO
+                                          ↑
+                                    Cette virgule coupe la ligne en trop de colonnes
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       TRANSFORMATIONS RECOMMANDÉES                          │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. FILTRER les lignes où market != 'MOROCCO' (lignes décalées)
+2. CONVERTIR price en Double et supprimer les invalides
+3. VALIDER que currency = 'USD' uniquement
+4. DÉDOUBLONNER les lignes identiques
+5. EXPORTER en format Parquet pour Power BI
+
+

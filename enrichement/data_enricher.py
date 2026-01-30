@@ -11,8 +11,8 @@ from tqdm import tqdm
 import os
 
 # Configuration
-INPUT_FILE = "morocco_market_data.xlsx"
-OUTPUT_FILE = "morocco_market_enriched.csv"
+INPUT_FILE = "../data/morocco_market_data.xlsx"
+OUTPUT_FILE = "../data/morocco_market_enriched.csv"
 TARGET_SIZE_GB = 2.0
 BATCH_SIZE = 100000  # Écriture par lots pour performance
 
